@@ -1,0 +1,5 @@
+para hacer commits es de la siguiente manera: 
+git init
+git add .
+git commit -m "TITULO"
+git push origin master o git push -u origin master (no estoy seguro cual de los 2)
