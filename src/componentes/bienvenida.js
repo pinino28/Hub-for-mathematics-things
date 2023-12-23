@@ -5,198 +5,25 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 function Bienvenida({tema, setTema, eng, setEng}) {
-  //para que no se vuelva a cargar el texto de bienvenida cada vez que cambio el tema o el idioma, podria poner el jQuery en un archivo aparte para que no vuelva a cargarse
-  //$(function(){
-  //$("#calculo").hide()
-  //$("#informatica").hide()
-  //
-  //$("#calculo").on("mouseover", function(){
-  // $("#calculo").show();
-  //})
-//
-  //$(setTimeout(function(){
-  //  $("#textoBienvenida").text("Bi|")
-  //}, 0))
-//
-  //   $(setTimeout(function(){
-  //     $("#textoBienvenida").text("Bie|")
-  //   }, 100))
-//
-  //   $(setTimeout(function(){
-  //     $("#textoBienvenida").text("Bien|")
-  //   }, 200))
-//
-  //   $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienv|")
-  //  }, 300))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienve|")
-  //  }, 500))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienven|")
-  //  }, 700))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienveni|")
-  //  }, 1000))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenid|")
-  //  }, 1400))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido|")
-  //  }, 1500))
-  //   
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido |")
-  //  }, 1800))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido a|")
-  //  }, 2000))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido al|")
-  //  }, 2100))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido al |")
-  //  }, 2200))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido al h|")
-  //  }, 2500))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido al hu|")
-  //  }, 2800))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido al hub|")
-  //  }, 3000))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido al hub1|")
-  //  }, 3200))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido al hub|")
-  //  }, 3400))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido al hub!|")
-  //  }, 3600))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido al hub!.|")
-  //  }, 3800))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido al hub!..|")
-  //  }, 4000))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido al hub!...|")
-  //  }, 4200))
-//
-  //  $(setTimeout(function(){
-  //    $("#textoBienvenida").text("Bienvenido al hub!...")
-  //  }, 4400))
-//
-  //  $("#calculoCont").on("mouseover", function(){
-  //   $("#calculoImg").slideUp()
-  //  })
-//
-  //});
-  const [text, setText] = useState("B");
+  
+  const [text, setText] = useState("");
+  const [num, setNum] = useState(1);
+  useEffect(() => {
 
-useEffect(() => {
+    const intervalId = setInterval(() => {
+    
+      const completeText = "Bienvenido al HUB...";
 
-setTimeout(()=>{
- setText("B|")
-}, 200);
+      // funcion que permite leer el texto y tomar una casilla mas cada vez que es leido
+      const updatedText = completeText.slice(0, num)
+      //Actualizar el numero, asi cuando se repite la funcion se puede agregar el nuevo texto.
+      setNum(num+1);
+      // Actualizar el estado con el nuevo texto
+      setText(updatedText);
+    }, 100); 
 
- setTimeout(()=>{
- setText("Bi|")
-}, 400)  
-
- setTimeout(()=>{
-  setText("Bie|")
- }, 500)  
-
-  setTimeout(()=>{
-  setText("Bien|")
- }, 600)  
-
-  setTimeout(()=>{
-  setText("Bienv|")
- }, 800)  
-
-  setTimeout(()=>{
-  setText("Bienve|")
- }, 850)  
-
-  setTimeout(()=>{
-  setText("Bienven|")
- }, 1000)  
-
-  setTimeout(()=>{
-  setText("Bienveni|")
- }, 1200)  
-
-  setTimeout(()=>{
-  setText("Bienvenido|")
- }, 1300)  
-
-  setTimeout(()=>{
-  setText("Bienvenido |")
- }, 1500)  
-
-  setTimeout(()=>{
-  setText("Bienvenido a|")
- }, 1600)  
-
-  setTimeout(()=>{
-  setText("Bienvenido al|")
- }, 1700)  
-
-  setTimeout(()=>{
-  setText("Bienvenido al |")
- }, 1900)  
-
-  setTimeout(()=>{
-  setText("Bienvenido al h|")
- }, 2000)  
-
-  setTimeout(()=>{
-  setText("Bienvenido al hu|")
- }, 2100)  
-
-  setTimeout(()=>{
-  setText("Bienvenido al hub|")
- }, 2200)  
-
-  setTimeout(()=>{
-  setText("Bienvenido al hub.|")
- }, 2400)  
-
-  setTimeout(()=>{
-  setText("Bienvenido al hub..|")
- }, 2600)  
-
-  setTimeout(()=>{
-  setText("Bienvenido al hub...|")
- }, 2700)  
-
-  setTimeout(()=>{
-  setText("Bienvenido al hub...")
- }, 2800)  
-
-
-}, [])
+    return () => clearInterval(intervalId);
+  }, [text]);
 
   return (
     <div className={tema?"fondoNegro":"fondoBlanco"}>
@@ -223,10 +50,10 @@ setTimeout(()=>{
             </div>
             <br/><br/>
 
-            <Link id="informatica" className={tema?"redireccionamientosClaro":"redireccionamientosOscuro"} to="/informatica">Informatica</Link>
+            <Link id="informatica" className={tema?"redireccionamientosClaro":"redireccionamientosOscuro"} to="/informatica">Informática</Link>
             <br/><br/>
             
-            <strong>Proximamente mas opciones?</strong>
+            <strong>Proximamente nuevas opciones disponibles...</strong>
     
            <footer>CD</footer>
         </div>

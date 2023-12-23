@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
 
-function Cálculo({tema, setTema}){
+function Cálculo({tema, setTema, setEng}){
     return(
         <div className={tema?"fondoNegro":"fondoBlanco"}>
 
@@ -11,7 +11,11 @@ function Cálculo({tema, setTema}){
          <h5 className='textoTema-posicion'>{tema?"Claro":"Oscuro"}</h5>
          </div>
         {/*boton de tema*/}
-        
+        {/*boton idioma*/}
+        <div className={""} onClick={setEng}> 
+           ESP
+        </div>
+        {/*boton idioma*/}
             <h1 className="textoBlanco textoMediano">Estas dentro de la opción de Cálculo I !.
             <br/>
             <br/>Contenido de cálculo I:</h1>
