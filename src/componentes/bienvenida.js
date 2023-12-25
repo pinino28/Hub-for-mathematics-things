@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-function Bienvenida({tema, setTema, eng, setEng}) {
+function Bienvenida({tema, setTema, setEng, setInfoCharge}) {
   
   const [text, setText] = useState("");
   const [num, setNum] = useState(1);
@@ -26,19 +26,19 @@ function Bienvenida({tema, setTema, eng, setEng}) {
   }, [text]);
 
   return (
-    <div className={tema?"fondoNegro":"fondoBlanco"}>
-      
+    <div className={tema?"container fondoNegro":"container fondoBlanco"}>
+      <div className="row topBar">
     {/*boton de tema*/}
-      <div onClick={setTema} className={tema?"textoTema-c":"textoTema-n"}>
+      <div onClick={setTema} className={tema?"col textoTema-c":"textoTema-n"}>
         <h5 className='textoTema-posicion'>{tema?"Claro":"Oscuro"}</h5>
         </div>
         {/*boton de tema*/}
         {/*boton idioma*/}
-        <div className={""} onClick={setEng}> 
+        <div className={"col language"} onClick={setEng}> 
            ESP
         </div>
         {/*boton idioma*/}
-
+        </div>
           <div className={tema?"bienvenidaTexto blanco":"bienvenidaTexto negro"} >
 
             <h1 id="textoBienvenida">{text}</h1> 
@@ -50,7 +50,7 @@ function Bienvenida({tema, setTema, eng, setEng}) {
             </div>
             <br/><br/>
 
-            <Link id="informatica" className={tema?"redireccionamientosClaro":"redireccionamientosOscuro"} to="/informatica">Informática</Link>
+            <Link id="informatica" onClick={setInfoCharge} className={tema?"redireccionamientosClaro":"redireccionamientosOscuro"} to="/informatica">Informática</Link>
             <br/><br/>
             
             <strong>Proximamente nuevas opciones disponibles...</strong>
