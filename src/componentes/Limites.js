@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Limites({tema, setTema}){
     return(
-        <div className={tema?"fondoBlanco":"fondoNegro"}>
+        <div className={tema?"container-fluid fondoNegro":"container-fluid fondoBlanco"}>
             <div onClick={setTema} className={tema?"textoTema-c":"textoTema-n"}>
         {/*boton de tema*/}
         <h5 className='textoTema-posicion'>{tema?"Claro":"Oscuro"}</h5>

@@ -43,7 +43,7 @@ function App() {
          <Route path="/Cálculo/Continuidad" element={<Continuidad setEng={()=>setEng(!eng)} tema={tema} setTema={()=>setTema(!tema)}/>}/>
          <Route path="/" element={eng?<Bienvenida setInfoCharge={()=>setInfoCharge(true)} tema={tema} setEng={()=>setEng(!eng)} setTema={()=>setTema(!tema)}/>:<BienvenidaENG setInfoCharge={()=>setInfoCharge(true)} tema={tema} setEng={()=>setEng(!eng)} setTema={()=>setTema(!tema)}/>}/>
          <Route path="/Cálculo" element={eng?<Cálculo tema={tema} setEng={()=>setEng(!eng)} setTema={()=>setTema(!tema)}/>:<CalculoENG tema={tema} setEng={()=>setEng(!eng)} setTema={()=>setTema(!tema)}/>}/>
-         <Route path="/Informatica" element={infoCharge?<InformaticaCarga setAct={()=>setAct(!act)} infoCharge={infoCharge}/>:<Informatica/>}/>
+         <Route path="/Informatica" element={infoCharge?<InformaticaCarga setAct={()=>setAct(!act)} infoCharge={infoCharge}/>:<Informatica setTema={()=>setTema(!tema)} tema={tema} setEng={()=>setEng(!eng)} eng={eng}/>}/>
          {//entonce, para que la variable pase a travez del componente se tiene que declarar la variable para ser 
          //usada en el componente, Y LUEGO se tiene que pasar la variable existen en el use state que esta aca.
          //y así es como pasamos la variable a otro componente...

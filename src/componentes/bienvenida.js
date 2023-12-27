@@ -26,10 +26,10 @@ function Bienvenida({tema, setTema, setEng, setInfoCharge}) {
   }, [text]);
 
   return (
-    <div className={tema?"container fondoNegro":"container fondoBlanco"}>
+    <div className={tema?"container-fluid fondoNegro":"container-fluid fondoBlanco"}>
       <div className="row topBar">
     {/*boton de tema*/}
-      <div onClick={setTema} className={tema?"col textoTema-c":"textoTema-n"}>
+      <div onClick={setTema} className={tema?"col textoTema-c":"col textoTema-n"}>
         <h5 className='textoTema-posicion'>{tema?"Claro":"Oscuro"}</h5>
         </div>
         {/*boton de tema*/}

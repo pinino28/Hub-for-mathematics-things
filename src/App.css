@@ -1,17 +1,46 @@
+
 /*BARRA DE ARRIBA*//*BARRA DE ARRIBA*//*BARRA DE ARRIBA*/
 /*BARRA DE ARRIBA*//*BARRA DE ARRIBA*//*BARRA DE ARRIBA*/
 
 .topBar{ 
-
+  
 }
-
 .language{
     position: absolute;
-    top:2vh;
-    left: 35vh;
+    top:1vh;
+    left: 20%;
     cursor: pointer;
     text-decoration: none;
-    
+    user-select: none;
+    font-size: 12px;
+}
+.textoTema-posicion{
+    padding-left: 110%;
+    font-size: 12px;
+    text-emphasis: none;
+    user-select: none;
+}
+.textoTema-n{
+    border-radius: 50%;
+    border-width: 0%;
+    border-color: linear-gradients(90deg, rgb(0,0,0) 0%,rgb(0,0,0) 0%,rgb(0,0,0) 0%);
+    background-color:rgb(186, 186, 186);
+    width: 2.5vh;
+    height: 2.5vh;
+    margin-left: 80%;
+    cursor: pointer;
+    color:black;
+}
+.textoTema-c{
+    border-radius: 50%;
+    border-width: 0%;
+    border-color: linear-gradients(90deg, rgb(0,0,0) 0%,rgb(0,0,0) 0%,rgb(0,0,0) 0%);
+    background-color:yellow;
+    width: 2.5vh;
+    height: 2.5vh;
+    margin-left: 80%;
+    cursor: pointer;
+    color:white;
 }
 /*BARRA DE ARRIBA*//*BARRA DE ARRIBA*//*BARRA DE ARRIBA*/
 /*BARRA DE ARRIBA*//*BARRA DE ARRIBA*//*BARRA DE ARRIBA*/
@@ -23,11 +52,9 @@
 .negro{
 color:black;
 }
-
 .blanco{
     color:white;
 }
-
 .redireccionamientosClaro{
     text-decoration: none;
     color:white;
@@ -38,6 +65,19 @@ color:black;
     color:black;
     font-size: 18px;
 }
+.fondoBlanco{
+    background-color: white;  
+    background-size: cover;
+    height: 100vh;
+    color: black;
+
+}
+.fondoNegro{
+    background-color: black;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
 
 /*CLASES GENERALES...*//*CLASES GENERALES...*//*CLASES GENERALES...*/
 /*CLASES GENERALES...*//*CLASES GENERALES...*//*CLASES GENERALES...*/
@@ -46,7 +86,6 @@ color:black;
 .bienvenidaTexto{
     text-align: center;
 }
-
 .textoMediano{
     font-size: 18px;
 }
@@ -63,31 +102,7 @@ color:black;
 /*FONDO DE LA PANTALLA DE BIENVENIDA...*//*FONDO DE LA PANTALLA DE BIENVENIDA...*//*FONDO DE LA PANTALLA DE BIENVENIDA...*/
 /*FONDO DE LA PANTALLA DE BIENVENIDA...*//*FONDO DE LA PANTALLA DE BIENVENIDA...*//*FONDO DE LA PANTALLA DE BIENVENIDA...*/
 
-.fondoBlanco{
-    background-color: white;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    padding-left: 15%;
-    top:0;
-    padding:0;
-    height: 100vh;
-    position: absolute;
-    color: black;
 
-}
-.fondoNegro{
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    padding-left: 15%;
-    top:0;
-    padding:0;
-    height: 100vh;
-    position: absolute;
-    color: white;
-}
 
 /*FONDO DE LA PANTALLA DE BIENVENIDA...*//*FONDO DE LA PANTALLA DE BIENVENIDA...*//*FONDO DE LA PANTALLA DE BIENVENIDA...*/
 /*FONDO DE LA PANTALLA DE BIENVENIDA...*//*FONDO DE LA PANTALLA DE BIENVENIDA...*//*FONDO DE LA PANTALLA DE BIENVENIDA...*/
@@ -101,34 +116,9 @@ footer{
 /*boton tema*//*boton tema*//*boton tema*/
 /*boton tema*//*boton tema*//*boton tema*/
 
-.textoTema-n{
-    border-radius: 50%;
-    margin-left: 0px;
-    border-width: 0%;
-    border-color: linear-gradients(90deg, rgb(0,0,0) 0%,rgb(0,0,0) 0%,rgb(0,0,0) 0%);
-    background-color:rgb(186, 186, 186);
-    width: 2.5vh;
-    height: 2.5vh;
-    margin-left: 80%;
-    cursor: pointer;
-    color:black;
-}
 
-.textoTema-c{
-    border-radius: 50%;
-    border-width: 0%;
-    border-color: linear-gradients(90deg, rgb(0,0,0) 0%,rgb(0,0,0) 0%,rgb(0,0,0) 0%);
-    background-color:yellow;
-    width: 2.5vh;
-    height: 2.5vh;
-    margin-left: 80%;
-    cursor: pointer;
-    color:white;
-}
 
-.textoTema-posicion{
-    padding-left: 110%;
-}
+
 /*boton tema*//*boton tema*//*boton tema*/
 /*boton tema*//*boton tema*//*boton tema*/
 
@@ -163,17 +153,37 @@ footer{
 .informatica{
     text-align: center;
     height: 100vh;
-    color: black;
+    color: rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
     
 }
-
 .informaticaBackground{
-  margin-left: 15%;
-  margin-right: 15%;
-  background-color: rgb(63, 62, 62);
+  background-color: rgba(94, 50, 50, 0.596);
   height: 100vh;
+  border: 2px solid rgba(17, 17, 17, 0.137);
+}
+.bienvenidaInformatica{
+    font-size: 3vw;
+    padding-top: 100px;
+    font-family:Arial, Helvetica, sans-serif;
+    /*background-color: rgba(0, 0, 0, 0);*/
+    /*text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+               1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;*/
+}
+.cuerpoInformatica{
+    padding-top: 4%;
+    font-size: 1.3vw;
 }
 
 /*INFORMAT*//*INFORMAT*//*INFORMAT*//*INFORMAT*//*INFORMAT*/
 /*INFORMAT*//*INFORMAT*//*INFORMAT*//*INFORMAT*//*INFORMAT*/
+
+/*CALCULO*//*CALCULO*//*CALCULO*//*CALCULO*/
+/*CALCULO*//*CALCULO*//*CALCULO*//*CALCULO*/
+
+.calculo{
+    padding-left: 20%;
+}
+
+/*CALCULO*//*CALCULO*//*CALCULO*//*CALCULO*/
+/*CALCULO*//*CALCULO*//*CALCULO*//*CALCULO*/

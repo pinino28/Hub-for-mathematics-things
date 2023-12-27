@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function CalculoENG({tema, setTema, setEng}){
     return(
-        <div className={tema?"fondoNegro":"fondoBlanco"}>
+        <div className={tema?"container-fluid fondoNegro":"container-fluid fondoBlanco"}>
 
         {/*boton de tema*/}                
         <div onClick={setTema} className={tema?"textoTema-c":"textoTema-n"}>
@@ -12,10 +12,11 @@ function CalculoENG({tema, setTema, setEng}){
          </div>
         {/*boton de tema*/}
         {/*boton idioma*/}
-        <div className={""} onClick={setEng}> 
+        <div className={"col language"} onClick={setEng}> 
            ENG
         </div>
         {/*boton idioma*/}
+        <div className="calculo">
             <h1 className="textoBlanco textoMediano">Your are inside of the calculus I section!.
             <br/>
             <br/>Calculus I content:</h1>
@@ -34,6 +35,7 @@ function CalculoENG({tema, setTema, setEng}){
             <br/>
              
             <Link className={tema?"redireccionamientosClaro volverAlInicioBoton":"redireccionamientosOscuro volverAlInicioBoton"} to={"/"}>Back to HUB</Link>
+            </div>
         </div>
     );
 }
